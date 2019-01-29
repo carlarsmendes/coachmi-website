@@ -38,7 +38,7 @@ nav{
   font-family: 'Barlow Condensed', sans-serif;
   display:flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content:space-evenly;
   position:fixed;
   width:100%;
   background-color:white;
@@ -53,7 +53,17 @@ nav{
   flex-direction: row;
   justify-content:space-evenly;
   align-items:center;
+  flex-grow:1;
 }
+
+.col-middle{
+  flex-grow:2;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items:center;
+}
+
 
 .col-middle ul li{
   display:inline-block;
@@ -82,7 +92,7 @@ nav .col-middle ul li a:hover {
   color:#26B7C0;
   font-weight:800;
   border-bottom: 3px solid #26B7C0;
-  padding-bottom: 40%;
+  padding-bottom: 45%;
 }
 
 
@@ -90,7 +100,7 @@ nav .col-middle ul li a:active {
   color:#26B7C0;
   font-weight:800;
   border-bottom: 3px solid #26B7C0;
-  padding-bottom: 40%;
+  padding-bottom: 45%;
 }
 
 
@@ -100,18 +110,20 @@ nav .col-3 #btn{
   width:154px;
   height: 30px;
   border-radius: 5px;
-  border: 1px solid #707070;
-  background-color:white;
+  border: 1px solid #26B7C0;
+  background-color:#26B7C0;
   text-align:center;
   font-family: 'Barlow Condensed', sans-serif;
   font-size:1em;
   text-decoration:none;
-  color:#316E7A;
+  color:white;
   padding-top:1% ;
+  letter-spacing: 1px;
 }
 
 nav .col-3 #btn:hover{
-  background-color:#316E7A;
+  border: 1px solid #316E7A;
+  background-color: #316E7A;
   color:white;
   font-family: 'Barlow Condensed', sans-serif;
   text-transform: uppercase;
@@ -166,6 +178,7 @@ header #header{
   background-size:cover;
   min-height: 69vw;
   height:90vw;
+  max-height:100vh;
 
 }
 
@@ -189,8 +202,8 @@ header #header{
 
 #why .section-box #manifesto-circle {
   position:absolute;
-  top:36%;
-  left:44%;
+  top:48%;
+  left:11%;
   
 }
 
@@ -234,6 +247,7 @@ header #header{
   font-family: 'Barlow Condensed', sans-serif;
   font-size:1em;
   text-decoration:none;
+  letter-spacing: 1px;
 }
 
 .btn-class:hover{
@@ -314,6 +328,7 @@ header #header{
   padding:5%;
   text-align:left;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+  width:50%;
 }
 
 
@@ -350,7 +365,17 @@ header #header{
   display:flex;
   flex-flow:row nowrap;
   justify-content: flex-end;
+  position:relative;
+  width:100%;
+
 }
+
+#what .header-container #how-circle{
+  top:17%;
+  right:53%;
+  position:absolute;
+}
+
 
 #what .col-container{
 
@@ -386,8 +411,9 @@ display: flex;
   font-size:2.5rem;
   padding:5% 0 5% 5%;
   font-weight:600;
-  width:45%;
+  width:535px;
   line-height:0.9;
+  position:relative;
 }
 
 #what .col-3 img{
@@ -431,6 +457,8 @@ display: flex;
   line-height:1.4;
   font-family: 'Montserrat', sans-serif;
   font-weight:400;
+  padding:0 10%;
+  line-height: 1.6;
 
 }
 
@@ -466,14 +494,14 @@ display: flex;
 #who .section-box{
   background-color:white;
   border-radius:5px;
-  padding:5%;
+  padding:3%;
   text-align:left;
   box-shadow: 0 0 50px rgba(49, 110, 122, 0.7);
   display:flex;
   flex-flow:row nowrap;
   justify-content: center;
   align-items: center;
-  width:70%;
+  width:50%;
 
 }
 
@@ -491,12 +519,15 @@ display: flex;
     background-image:url("../img/Ines01.jpg");
     background-repeat:no-repeat;
     background-size:100% 100%;
-    width:25vw;
+    width:20vw;
     max-width:25vw;
     max-height:25vw;
-    height:25vw;
-   
+    height:20vw;
+    min-width:20vw;
+    min-height:20vw;
     }
+
+  
 
 
     #who .section-container #coach-img:hover{
@@ -505,16 +536,26 @@ display: flex;
 
       }
 
-    #who .section-container p{
-      width:60%;
+
+      #who .section-container #coach-info{
+        width:60%;
       padding:2%;
       margin:2%;
       font-family: 'Montserrat', sans-serif;
       font-weight:300;
       font-size:1.13rem;
       line-height:1.7;
-  
-      }
+      display:flex;
+      justify-content: space-between;
+      flex-flow:column nowrap;
+      align-content: space-around;
+        }
+
+        #who .section-container #coach-info p{
+         margin-bottom:3%;
+          }
+
+
 
     
   
@@ -550,8 +591,8 @@ display: flex;
 /************   GET IN TOUCH SECTION **********/
 
 
-  #get-in-touch{
-    height:80vh;
+#get-in-touch{
+    height:60vh;
     
   }
 #footer-info{
@@ -559,10 +600,12 @@ display: flex;
     background-image:url("../img/BgGetInTouch.svg");
     height:60vh;
     color:white;
+    background-size:cover;
 }
 
 #footer-info img{
   height:5vw;
+  max-width:250px;
 }
 
 #footer-info p{
@@ -604,6 +647,7 @@ display: flex;
 #get-in-touch .barlow {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight:500;
+  font-size:1.1rem;
 
 }
 
@@ -624,8 +668,18 @@ display: flex;
     padding:1px;
   }
 
-  #get-in-touch iframe {
+  #get-in-touch .col_right p a{
+    text-decoration: none;
+    color:white;
+  }
+
+  #map {
+    background-image: url(../img/Mapa.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:50vh;
     width:100%;
+    display:block;
     
   }
 
